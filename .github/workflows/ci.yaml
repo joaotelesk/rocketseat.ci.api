@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and Push docker
-        use: docker/build-push-action@v5
+        uses: docker/build-push-action@v5
         with:
           push: true
           tags: joaotelesk/rocketseat-ci-api:${{ steps.generate_tag.outputs.sha }},joaotelesk/rocketseat-ci-api:latest
